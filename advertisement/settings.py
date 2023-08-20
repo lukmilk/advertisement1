@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # our app
     "app_advertisement",
     "app_lesson_4",
 ]
@@ -78,9 +79,11 @@ WSGI_APPLICATION = 'advertisement.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': Path.joinpath(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+
 
 
 # Password validation
